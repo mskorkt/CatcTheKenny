@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <ImageView
+        android:id="@+id/kennyImage"
+        android:layout_width="122dp"
+        android:layout_height="120dp"
+        android:layout_margin="5dp"
+        android:onClick="increaseScore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kenny" />
+
+    <TextView
+        android:id="@+id/timeView"
+        android:layout_width="413dp"
+        android:layout_height="54dp"
+        android:background="#D98977"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Time : 10"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreView"
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:background="#D98977"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="Score : 0"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/pauseBtn"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:background="@drawable/custom_button"
+        android:onClick="pauseGame"
+        android:text="Pause"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scoreView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/restartGameBtn"
+        android:layout_width="413dp"
+        android:layout_height="63dp"
+        android:background="@drawable/custom_button"
+        android:onClick="restartGame"
+        android:text="Restart Game"
+        android:textColor="@color/white"
+        android:textSize="22dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/goMenuBtn"
+        android:layout_width="110dp"
+        android:layout_height="55dp"
+        android:background="@drawable/custom_button"
+        android:onClick="goMenu"
+        android:text="Go Menu"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scoreView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
